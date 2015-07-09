@@ -4,29 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--首页导航-->
-        <scene sceneID="acs-0h-QSm">
-            <objects>
-                <navigationController title="首页导航" automaticallyAdjustsScrollViewInsets="NO" id="svi-CD-Cwq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="图鉴" image="search.png" id="pn6-JI-eKx"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TgH-tq-012">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uzB-aC-eC7" kind="relationship" relationship="rootViewController" id="E3V-jR-JDv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ohf-vw-MLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="942" y="778"/>
-        </scene>
         <!--首页UI-->
         <scene sceneID="T2r-7l-x1v">
             <objects>
@@ -48,6 +25,7 @@
                             <outlet property="delegate" destination="uzB-aC-eC7" id="ijr-6S-AvY"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="图鉴" image="search.png" id="xUy-J5-NHy"/>
                     <navigationItem key="navigationItem" title="图鉴" id="PHd-sP-KNa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6S-Kc-0VQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,7 +43,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="svi-CD-Cwq" kind="relationship" relationship="viewControllers" id="h76-N5-jqa"/>
+                        <segue destination="uzB-aC-eC7" kind="relationship" relationship="viewControllers" id="uPi-sC-KzM"/>
                         <segue destination="qZe-6r-tck" kind="relationship" relationship="viewControllers" id="72o-5t-Sfm"/>
                         <segue destination="b2H-MG-sWQ" kind="relationship" relationship="viewControllers" id="OXu-EG-SI5"/>
                         <segue destination="JEb-Gj-vC7" kind="relationship" relationship="viewControllers" id="rCo-3Z-XMU"/>

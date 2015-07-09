@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface Common : NSObject
 
++(UIColor *) colorWithHexString: (NSString *) stringToConvert;
 +(BOOL) isEmptyString:(NSString *)str;
 
 @end

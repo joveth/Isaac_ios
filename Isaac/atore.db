@@ -61,7 +61,7 @@ insert into tb_isaac values(null,'gong_image061.png','剃须刀片','Razor Blade
 insert into tb_isaac values(null,'gong_image062.png','红蜡烛','Red Candle','主动道具。发射的红黄色火焰而且不会消失而是一直移动到头并持续存在，可以被自己的眼泪浇灭，随着消灭敌人火会渐渐熄灭。 商店道具。','充能：自动充能','解锁方式：往存款机存入400元解锁。','1')
 insert into tb_isaac values(null,'gong_image063.png','遥控引爆器','Remote Detonator','主动道具。拿到时给予5颗炸弹，丢出去的炸弹只有在使用引爆器的时候才会爆炸。 能提前引爆婴儿博士的炸弹，但是不能延长引爆时间。 可以同时引爆很多炸弹。 宝物房、商店、BOSS RUSH房道具。','充能：无需充能','解锁方式：无说明','1')
 insert into tb_isaac values(null,'gong_image064.png','撒旦圣经','Satanic Bible','主动道具。使用后给予一颗黑心。 宝物房、书店、恶魔房道具。','充能：6','解锁方式：用阿萨谢尔通关大教堂解锁。','1')
-insert into tb_isaac values(null,'gong_image220.png','剪刀','Scissors','主动道具。使角色头和身体分离，头只能在原地漂浮，身体可操控，头和身体都能发射眼泪但是头发射眼泪的速度比身体慢得多，伤害判定在身体。 同一房间内可以存在多个脑袋。 宝物房道具。','充能：6','解锁方式：死亡100次解锁。 ','1')
+insert into tb_isaac values(null,'shou_image220.png','剪刀','Scissors','主动道具。使角色头和身体分离，头只能在原地漂浮，身体可操控，头和身体都能发射眼泪但是头发射眼泪的速度比身体慢得多，伤害判定在身体。 同一房间内可以存在多个脑袋。 宝物房道具。','充能：6','解锁方式：死亡100次解锁。 ','1')
 insert into tb_isaac values(null,'gong_image066.png','蜘蛛腹部','Spider Butt','主动道具。对房间内所有敌人造成伤害，并对敌人以及敌人的子弹造成减速效果。 宝物房道具。','充能：2','解锁方式：无说明','1')
 insert into tb_isaac values(null,'gong_image001.png','嗖-哒-呜','Shoop','主动道具。使用后用方向键或鼠标控制，向某个方向发射一道激光。 宝物房道具。','充能：1','解锁方式：无说明','1')
 insert into tb_isaac values(null,'gong_image067.png','塔米猫的头','Tammy''s Head','主动道具。向角色周围10个方向发动和当前角色相同的攻击（眼泪、硫磺火、妈刀、吐根、炸弹等），每个方向的攻击都和本身攻击相同并且带有原本眼泪带有的特殊效果。如果以撒的左右眼子弹不一样，会继承最近一发子弹的效果， 如果玩家拥有科技2，塔米猫的头是不继承科激光效果的。 金色宝箱道具。','充能：1','解锁方式：无说明','1')
