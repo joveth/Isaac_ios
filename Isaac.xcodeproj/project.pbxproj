@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F9101B351B55EF4B00740A32 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9101B341B55EF4B00740A32 /* scan@2x.png */; };
+		F97821DA1B5E1E0F0027ABAD /* BossItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97821D91B5E1E0F0027ABAD /* BossItem.xib */; };
+		F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */; };
 		F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258331B461AD5004240A0 /* FMDatabase.m */; };
 		F9F2583E1B461AD5004240A0 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258351B461AD5004240A0 /* FMDatabaseAdditions.m */; };
 		F9F2583F1B461AD5004240A0 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258371B461AD5004240A0 /* FMDatabasePool.m */; };
@@ -685,6 +687,9 @@
 
 /* Begin PBXFileReference section */
 		F9101B341B55EF4B00740A32 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
+		F97821D91B5E1E0F0027ABAD /* BossItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BossItem.xib; sourceTree = "<group>"; };
+		F97821DE1B5E1EAB0027ABAD /* BossItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossItemCell.h; sourceTree = "<group>"; };
+		F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossItemCell.m; sourceTree = "<group>"; };
 		F9F258321B461AD5004240A0 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		F9F258331B461AD5004240A0 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		F9F258341B461AD5004240A0 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -2133,6 +2138,9 @@
 		F9F2625F1B466760004240A0 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F97821D91B5E1E0F0027ABAD /* BossItem.xib */,
+				F97821DE1B5E1EAB0027ABAD /* BossItemCell.h */,
+				F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -2784,6 +2792,7 @@
 				F9F2622B1B462D98004240A0 /* sign_image010.png in Resources */,
 				F9F25FEB1B462D43004240A0 /* hung_image038.png in Resources */,
 				F9F25B2A1B462570004240A0 /* card_image028.jpg in Resources */,
+				F97821DA1B5E1E0F0027ABAD /* BossItem.xib in Resources */,
 				F9F25E0B1B462CD3004240A0 /* gong_image048.png in Resources */,
 				F9F261E01B462D73004240A0 /* shou_image210.png in Resources */,
 				F9F2611B1B462D73004240A0 /* shou_image013.png in Resources */,
@@ -2984,6 +2993,7 @@
 				F9F7358E1B45429700DF0109 /* DBHelper.m in Sources */,
 				F9F2625E1B4666D6004240A0 /* MainActivity.m in Sources */,
 				F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */,
+				F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */,
 				F9F262571B46343C004240A0 /* Common.m in Sources */,
 				F9F258411B461AD5004240A0 /* FMResultSet.m in Sources */,
 				F9F2583E1B461AD5004240A0 /* FMDatabaseAdditions.m in Sources */,
