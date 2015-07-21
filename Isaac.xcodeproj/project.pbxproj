@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9101B351B55EF4B00740A32 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9101B341B55EF4B00740A32 /* scan@2x.png */; };
 		F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258331B461AD5004240A0 /* FMDatabase.m */; };
 		F9F2583E1B461AD5004240A0 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258351B461AD5004240A0 /* FMDatabaseAdditions.m */; };
 		F9F2583F1B461AD5004240A0 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258371B461AD5004240A0 /* FMDatabasePool.m */; };
@@ -683,6 +684,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9101B341B55EF4B00740A32 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
 		F9F258321B461AD5004240A0 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		F9F258331B461AD5004240A0 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		F9F258341B461AD5004240A0 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1403,6 +1405,11 @@
 		F9F258441B4624E4004240A0 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F9101B341B55EF4B00740A32 /* scan@2x.png */,
+				F9F735851B453E4C00DF0109 /* search@2x.png */,
+				F9F735831B453DCA00DF0109 /* more@2x.png */,
+				F9F735811B453CBF00DF0109 /* small@2x.png */,
+				F9F7357F1B453AF700DF0109 /* boss@2x.png */,
 				F9F258871B46256F004240A0 /* card */,
 				F9F258A91B46256F004240A0 /* gong */,
 				F9F258F41B46256F004240A0 /* houner */,
@@ -2198,10 +2205,6 @@
 			isa = PBXGroup;
 			children = (
 				F9F258441B4624E4004240A0 /* images */,
-				F9F735851B453E4C00DF0109 /* search@2x.png */,
-				F9F735831B453DCA00DF0109 /* more@2x.png */,
-				F9F735811B453CBF00DF0109 /* small@2x.png */,
-				F9F7357F1B453AF700DF0109 /* boss@2x.png */,
 			);
 			name = res;
 			sourceTree = "<group>";
@@ -2893,6 +2896,7 @@
 				F9F25B111B462570004240A0 /* card_image003.jpg in Resources */,
 				F9F25E111B462CD3004240A0 /* gong_image054.png in Resources */,
 				F9F258431B46207E004240A0 /* atore.db in Resources */,
+				F9101B351B55EF4B00740A32 /* scan@2x.png in Resources */,
 				F9F25EEB1B462D15004240A0 /* houner_image020.png in Resources */,
 				F9F25FD51B462D43004240A0 /* hung_image016.png in Resources */,
 				F9F25E131B462CD3004240A0 /* gong_image056.png in Resources */,

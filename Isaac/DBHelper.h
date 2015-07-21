@@ -15,4 +15,6 @@
 -(void)initData;
 -(NSInteger)getCnt;
 -(NSMutableArray *)getIsaacs:(NSString *)offset;
+-(NSMutableArray *)getIsaacsByKey:(NSString *)keyword;
+-(NSMutableArray *)getIsaacsByType:(NSString *)type;
 @end

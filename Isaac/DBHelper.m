@@ -39,7 +39,7 @@ static const NSString *TB_BOSS = @"tb_boss";
     if ([db open]) {
         NSLog(@"打开成功");
         // 2.1创建表
-        NSString *sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500),power varchar(20),unlock varchar(200),type char(1) )";
+        NSString *sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(800),power varchar(20),unlock varchar(200),type char(1) )";
         BOOL success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_ISAAC]];
         
         sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500),score varchar(5),type char(1))";
@@ -110,5 +110,52 @@ static const NSString *TB_BOSS = @"tb_boss";
     [db close];
     return ret;
 }
-
+-(NSMutableArray *)getIsaacsByKey:(NSString *)keyword{
+    NSMutableArray *ret = [[NSMutableArray alloc] init];
+    if(![db open])
+    {
+        return ret;
+    }
+    FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"select * from %@  where enname like '%%%@%%' or  name like '%%%@%%' or content like '%%%@%%' or power like '%%%@%%' or unlock like '%%%@%%' ",TB_ISAAC,keyword,keyword,keyword,keyword,keyword]];
+    IsaacBean *bean;
+    while ([rs next]) {
+        NSDictionary *dict = [rs resultDictionary];
+        bean = [[IsaacBean alloc] init];
+        bean.sid = dict[@"id"];
+        bean.image = dict[@"image"];
+        bean.name = dict[@"name"];
+        bean.enName = dict[@"enname"];
+        bean.content = dict[@"content"];
+        bean.power = dict[@"power"];
+        bean.unlock = dict[@"unlock"];
+        [ret addObject:bean];
+    }
+    [rs close];
+    [db close];
+    return ret;
+}
+-(NSMutableArray *)getIsaacsByType:(NSString *)type{
+    NSMutableArray *ret = [[NSMutableArray alloc] init];
+    if(![db open])
+    {
+        return ret;
+    }
+    FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"select * from %@  where type=? ",TB_ISAAC],type];
+    IsaacBean *bean;
+    while ([rs next]) {
+        NSDictionary *dict = [rs resultDictionary];
+        bean = [[IsaacBean alloc] init];
+        bean.sid = dict[@"id"];
+        bean.image = dict[@"image"];
+        bean.name = dict[@"name"];
+        bean.enName = dict[@"enname"];
+        bean.content = dict[@"content"];
+        bean.power = dict[@"power"];
+        bean.unlock = dict[@"unlock"];
+        [ret addObject:bean];
+    }
+    [rs close];
+    [db close];
+    return ret;
+}
 @end

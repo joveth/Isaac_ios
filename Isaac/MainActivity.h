@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainActivity : UITableViewController
+@interface MainActivity : UITableViewController<UISearchBarDelegate,UIActionSheetDelegate>
 
 @end
