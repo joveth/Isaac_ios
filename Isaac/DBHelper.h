@@ -17,4 +17,7 @@
 -(NSMutableArray *)getIsaacs:(NSString *)offset;
 -(NSMutableArray *)getIsaacsByKey:(NSString *)keyword;
 -(NSMutableArray *)getIsaacsByType:(NSString *)type;
+-(NSMutableArray *)getBoss:(NSString *)offset;
+
+
 @end

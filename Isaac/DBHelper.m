@@ -10,6 +10,7 @@
 #import "FMDatabase.h"
 #import "Common.h"
 #import "IsaacBean.h"
+#import "BossBean.h"
 
 @interface DBHelper(){
     FMDatabase *db;
@@ -17,7 +18,7 @@
 @end
 
 static const NSString *TB_ISAAC = @"tb_isaac";
-static const NSString *TB_BOSS = @"tb_boss";
+static const NSString *TB_BOSS = @"tb_isaac_boss";
 
 @implementation DBHelper
 +(id)sharedInstance{
@@ -42,7 +43,7 @@ static const NSString *TB_BOSS = @"tb_boss";
         NSString *sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(800),power varchar(20),unlock varchar(200),type char(1) )";
         BOOL success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_ISAAC]];
         
-        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500),score varchar(5),type char(1))";
+        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500),score varchar(5))";
         
         success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_BOSS]];
         
@@ -158,4 +159,28 @@ static const NSString *TB_BOSS = @"tb_boss";
     [db close];
     return ret;
 }
+-(NSMutableArray *)getBoss:(NSString *)offset{
+    NSMutableArray *ret = [[NSMutableArray alloc] init];
+    if(![db open])
+    {
+        return ret;
+    }
+    FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"select * from %@ ",TB_BOSS]];
+    BossBean *bean;
+    while ([rs next]) {
+        NSDictionary *dict = [rs resultDictionary];
+        bean = [[BossBean alloc] init];
+        bean.sid = dict[@"id"];
+        bean.image = dict[@"image"];
+        bean.name = dict[@"name"];
+        bean.enName = dict[@"enname"];
+        bean.content = dict[@"content"];
+        bean.score = dict[@"score"];
+        [ret addObject:bean];
+    }
+    [rs close];
+    [db close];
+    return ret;
+}
+
 @end

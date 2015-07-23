@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BossItemCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end

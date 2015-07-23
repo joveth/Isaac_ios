@@ -6,16 +6,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1Gu-Ih-zjN">
-            <rect key="frame" x="0.0" y="0.0" width="104" height="103"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BossItemCell" id="1Gu-Ih-zjN" customClass="BossItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="111" height="12"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="104" height="103"/>
+                <rect key="frame" x="0.0" y="0.0" width="111" height="12"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <size key="customSize" width="104" height="103"/>
-            <point key="canvasLocation" x="425" y="310.5"/>
+            <size key="customSize" width="111" height="12"/>
+            <point key="canvasLocation" x="428.5" y="265"/>
         </collectionViewCell>
     </objects>
 </document>
