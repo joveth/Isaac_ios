@@ -80,7 +80,7 @@ static NSInteger const nameLabel = 1;
         starRatingView =[[RatingView alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
         starRatingView.tag=3;
         [cell.contentView addSubview:starRatingView];
-        [starRatingView setImagesDeselected:@"0.png" partlySelected:@"1.png" fullSelected:@"2.png" andDelegate:nil];
+        [starRatingView setImagesDeselected:@"star1.png" partlySelected:@"star2.png" fullSelected:@"star3.png" andDelegate:nil];
     }
     
     cell.layer.cornerRadius=4;

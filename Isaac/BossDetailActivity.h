@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PKRevealController.h"
 
-@interface BossDetailActivity : UIViewController
+@interface BossDetailActivity : PKRevealController<UITableViewDelegate,UITableViewDataSource>
 
 @end

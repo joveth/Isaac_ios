@@ -170,12 +170,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Isaac/BossDetailActivity.m"
-            timestampString = "459335361.51235"
+            timestampString = "459424610.288567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "-startPresentationMode"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -185,13 +185,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Isaac/BossDetailActivity.m"
-            timestampString = "459335361.988973"
+            filePath = "Isaac/PKRevealController.m"
+            timestampString = "459400129.471398"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "303"
+            endingLineNumber = "303"
+            landmarkName = "-enterPresentationModeForViewController:animated:completion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Isaac/PKRevealController.m"
+            timestampString = "459400129.471398"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
+            landmarkName = "-enterPresentationModeForViewController:animated:completion:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Isaac/PKRevealController.m"
+            timestampString = "459396895.677161"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
+            landmarkName = "-enterPresentationModeForViewController:animated:completion:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
