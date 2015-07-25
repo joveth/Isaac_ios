@@ -29,17 +29,20 @@
     NSMutableArray *contentList;
     DBHelper *db;
     CGFloat screenWidth;
+    UIScrollView *scroll;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Step 1: Create your controllers.
     self.frontViewController = [[UIViewController alloc] init];
+    scroll = [[UIScrollView alloc] init];
+    scroll.frame = self.view.frame;
+    
+    scroll.backgroundColor = [Common colorWithHexString:@"e0e0e0"];
+    [self.frontViewController.view addSubview:scroll];
     self.frontViewController.view.backgroundColor = [Common colorWithHexString:@"e0e0e0"];
-    menuBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 25, 40, 40)];
-    [menuBtn setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
-    [self.frontViewController.view addSubview:menuBtn];
-    contentList  =[[NSMutableArray alloc] init];
+        contentList  =[[NSMutableArray alloc] init];
     db = [DBHelper sharedInstance];
     bossBean = [ShareData shareInstance].bossBean;
     if(!bossBean){
@@ -51,9 +54,17 @@
         width = temp.size.height;
     }
     screenWidth = [UIScreen mainScreen].applicationFrame.size.width;
+    menuBtn = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth-60, 25, 40, 40)];
+    [menuBtn setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+    UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 25, 40, 40)];
+    [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
+    [scroll addSubview:menuBtn];
+    [scroll addSubview:backBtn];
+
     CGFloat height = [UIScreen mainScreen].applicationFrame.size.height;
     CGFloat yp = self.view.center.x-width/2-10;
-    bossImageView = [[UIImageView alloc] initWithFrame:CGRectMake(yp, 100, width+20, width+20)];
+    bossImageView = [[UIImageView alloc] initWithFrame:CGRectMake(yp, 80, width+20, width+20)];
     bossImageView.backgroundColor = [UIColor whiteColor];
     bossImageView.image = temp;
     
@@ -61,14 +72,16 @@
     [bossImageView.layer setMasksToBounds:YES];
     [self.view setBackgroundColor:[Common colorWithHexString:@"e0e0e0"]];
     
-    
     nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, screenWidth, 40)];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.text = bossBean.name;
     nameLabel.textColor = [UIColor blackColor];
     nameLabel.font = [UIFont systemFontOfSize:16.0];
-    [self.frontViewController.view addSubview:nameLabel];
-    [self.frontViewController.view addSubview:bossImageView];
+    
+    
+    
+    [scroll addSubview:nameLabel];
+    [scroll addSubview:bossImageView];
     self.animationDuration = 0.25;
     
     self.leftTab = [[UIViewController alloc] init];
@@ -86,32 +99,37 @@
             line = t;
         }
     }
-    
-    contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 140+width, screenWidth-20, line*24)];
+    enLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 120+width, screenWidth, 30)];
+    enLabel.textAlignment = NSTextAlignmentCenter;
+    enLabel.text = [NSString stringWithFormat:@"英文名：%@,战斗值：%@",bossBean.enName,bossBean.score];
+    enLabel.textColor = [UIColor blackColor];
+    enLabel.font = [UIFont systemFontOfSize:16.0];
+    [scroll addSubview:enLabel];
+    contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 160+width, screenWidth-20, line*size.height+40)];
     contentLabel.text = bossBean.content;
     [contentLabel setFont:[UIFont systemFontOfSize:16.0]];
     contentLabel.numberOfLines=0;
     contentLabel.lineBreakMode=NSLineBreakByWordWrapping;
     
-    [self.frontViewController.view addSubview:contentLabel];
-    UITableView *tab = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, screenWidth, height)];
+    [scroll addSubview:contentLabel];
+    scroll.contentSize = CGSizeMake(screenWidth, 250+width+line*size.height);
+    
+    UITableView *tab = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, screenWidth, height-30)];
     self.leftTab.view.backgroundColor=[Common colorWithHexString:@"eb4f38"];
     tab.backgroundColor = [Common colorWithHexString:@"eb4f38"];
     tab.delegate = self;
     tab.dataSource = self;
-//    self.leftTab.tableView.backgroundColor = [Common colorWithHexString:@"eb4f38"];
-//    self.leftTab.tableView.delegate = self;
-//    self.leftTab.tableView.dataSource = self;
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth-100, 100)];
+
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenWidth-100, 30)];
     UIButton *button =[[UIButton alloc] initWithFrame:CGRectMake(0, 30, 100, 40)];
     [button setTitle:@"返回" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
-    [header addSubview:button];
+    //[header addSubview:button];
     [self.leftTab.view addSubview:header];
     [self.leftTab.view addSubview:tab];
-    self.leftViewController = self.leftTab;
+    self.rightViewController = self.leftTab;
     [self setMinimumWidth:screenWidth-60 maximumWidth:screenWidth-60 forViewController:self.leftTab];
     [menuBtn addTarget:self action:@selector(startPresentationMode) forControlEvents:UIControlEventTouchDown];
     contentList = [db getBoss:@"1"];
@@ -142,7 +160,7 @@
         cell.backgroundColor=[Common colorWithHexString:@"eb4f38"];
     }
     if(bImg==nil){
-        bImg =[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 50, 50)];
+        bImg =[[UIImageView alloc] initWithFrame:CGRectMake(70, 10, 50, 50)];
         [bImg.layer setCornerRadius:25];
         [bImg.layer setMasksToBounds:YES];
         bImg.backgroundColor = [UIColor whiteColor];
@@ -150,7 +168,7 @@
         bImg.tag=1;
     }
     if(nameLab==nil){
-        nameLab = [[UILabel alloc] initWithFrame:CGRectMake(70, 10, screenWidth-80, 50)];
+        nameLab = [[UILabel alloc] initWithFrame:CGRectMake(130, 10, screenWidth-80, 50)];
         nameLab.textColor=[UIColor whiteColor];
         [cell addSubview:nameLab];
         nameLab.tag=2;
@@ -187,7 +205,7 @@
     }
     
     CGFloat yp = self.view.center.x-width/2-10;
-    bossImageView.frame=CGRectMake(yp, 100, width+20, width+20);
+    bossImageView.frame=CGRectMake(yp, 80, width+20, width+20);
     bossImageView.image = temp;
     [bossImageView.layer setCornerRadius:(bossImageView.frame.size.width/2)];
     nameLabel.text = bossBean.name;
@@ -205,8 +223,12 @@
             line = t;
         }
     }
-    contentLabel.frame = CGRectMake(10, 140+width, screenWidth-20, line*24);
+    contentLabel.frame = CGRectMake(10, 160+width, screenWidth-20, line*size.height+40);
     contentLabel.text = bossBean.content;
+    
+    enLabel.frame = CGRectMake(0, 120+width, screenWidth, 30);
+    enLabel.text = [NSString stringWithFormat:@"英文名：%@,战斗值：%@",bossBean.enName,bossBean.score];
+    scroll.contentSize = CGSizeMake(screenWidth, 250+width+line*size.height);
 }
 
 -(IBAction)presetMenu:(id)sender{
@@ -223,7 +245,7 @@
     NSLog(@"clicked");
     if (![self isPresentationModeActive])
     {
-        [self enterPresentationModeForViewController:PKRevealControllerShowsLeftViewControllerInPresentationMode
+        [self enterPresentationModeForViewController:PKRevealControllerShowsRightViewControllerInPresentationMode
                                             animated:YES
                                           completion:nil ];
     }

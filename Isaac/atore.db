@@ -674,8 +674,8 @@ insert into tb_isaac_boss values(null,'boss_14.jpg','瘘管','Fistula','Basement
 insert into tb_isaac_boss values(null,'boss_15.jpg','大白虫','C.H.U.B.','只出现在Caves血量一般，和原版一样，会不断吐小白虫，冲咬玩家（和炸弹hh），引好就行，需要点时间打，但是不算很难','6');
 insert into tb_isaac_boss values(null,'boss_16.jpg','翔王','Gurdy','只出现在Caves血量高（吗），和原版一样，进入boss战玩家会强行处于下方，左右各一个弹幕球，boss会随机吐红苍蝇、奇数弹苍蝇、5方向弹（这个挺难躲，请注意利用地形），同时在面前放置弹幕球，挺烦一boss，比较伤无伤成就……','7');
 insert into tb_isaac_boss values(null,'boss_17.jpg','大Maw','Mega Maw','（Maw就是那个自机狙的头），只出现在Caves血量一般，新加的boss，前期也是比较难打，进入boss战玩家处于下方，会使用5方向（从左逆时针到右，45度一个方向）火焰，和旋转5方向火焰，以及两层不同旋转方向的火焰，会吐Hooper，就是会小跳的身子，反正我是不太会躲火= ','7');
-insert into tb_isaac_boss values(null,'boss_18.jpg','查得','C.H.A.D','只出现在Caves血量一般，和Chub一样，但是吐的是弹幕瓢虫，随着血量减少体型会减小，打发一样，掉落【LillteChad】 ','7');
-insert into tb_isaac_boss values(null,'boss_19.jpg','大胖','Mega Fatty',' 只出现在Caves，可能出现两只血量一般偏上，新加的boss，主要技能有：向玩家方向吐出大片呕吐物（累死萌死戳的弹幕）；召唤小翔们；猛吸一口，然后持续吐出大量呕吐物（太恶心了Orz）；以及跳起来落至玩家位置。其中最后一个技能，落地时间不一定，所以务必保持移动，因为可能一瞬间就砸下来，而且落地位置会产生yima血。不宜久战的boss ','7');
+insert into tb_isaac_boss values(null,'boss_19.jpg','查得','C.H.A.D','只出现在Caves血量一般，和Chub一样，但是吐的是弹幕瓢虫，随着血量减少体型会减小，打发一样，掉落【LillteChad】 ','7');
+insert into tb_isaac_boss values(null,'boss_18.jpg','大胖','Mega Fatty',' 只出现在Caves，可能出现两只血量一般偏上，新加的boss，主要技能有：向玩家方向吐出大片呕吐物（累死萌死戳的弹幕）；召唤小翔们；猛吸一口，然后持续吐出大量呕吐物（太恶心了Orz）；以及跳起来落至玩家位置。其中最后一个技能，落地时间不一定，所以务必保持移动，因为可能一瞬间就砸下来，而且落地位置会产生yima血。不宜久战的boss ','7');
 insert into tb_isaac_boss values(null,'boss_20.jpg','贪吃蛇2','The Hollow',' 只出现在Catacombs和原版一样，对角线的贪吃蛇，不能再好打的boss，只需要注意绿色变体会有3平行弹幕，黑色死后出爆炸大苍蝇就好 ','5');
 insert into tb_isaac_boss values(null,'boss_21.jpg','寄生壳','The Husk',' 只出现在Catacombs和原版一样，很好打的boss，跟苍蝇公爵一个尿性，只不过速度更快，不想多说…… ','5');
 insert into tb_isaac_boss values(null,'boss_22.jpg','小便君','The Peep',' 只出现在Catacombs和原版一样，血量一般，会大跳落在玩家位置，滞空之间足够逃离，6方向弹幕，原地黄色粘♂稠腐蚀性液体，随血量减少眼睛会出来斜向运动体触玩家，满场跑就好，注意绿色变体一开始两只眼睛都在外面，黄色变体跳跃路线上也会有小便就好（就是不要来回跑） ','8');

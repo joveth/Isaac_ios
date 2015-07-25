@@ -64,6 +64,7 @@
 		F9012C021B5F8C7800B027C3 /* boss_56.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012BCB1B5F8C7800B027C3 /* boss_56.jpg */; };
 		F9012C051B5F903700B027C3 /* BossBean.m in Sources */ = {isa = PBXBuildFile; fileRef = F9012C041B5F903700B027C3 /* BossBean.m */; };
 		F9012C091B5F911100B027C3 /* BossActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F9012C081B5F911100B027C3 /* BossActivity.m */; };
+		F90424791B631BAF0030692B /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F90424781B631BAF0030692B /* back@2x.png */; };
 		F9101B351B55EF4B00740A32 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9101B341B55EF4B00740A32 /* scan@2x.png */; };
 		F97821DA1B5E1E0F0027ABAD /* BossItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97821D91B5E1E0F0027ABAD /* BossItem.xib */; };
 		F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */; };
@@ -732,7 +733,6 @@
 		F9F5B9AC1B61D3B100607181 /* star3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F5B9A91B61D3B100607181 /* star3@2x.png */; };
 		F9F5B9AD1B61D3B100607181 /* star2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F5B9AA1B61D3B100607181 /* star2@2x.png */; };
 		F9F5B9B01B61E83100607181 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F5B9AF1B61E83100607181 /* menu@2x.png */; };
-		F9F5B9B41B62332600607181 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F5B9B31B62332600607181 /* back@2x.png */; };
 		F9F735551B45308C00DF0109 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F735541B45308C00DF0109 /* main.m */; };
 		F9F735581B45308C00DF0109 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F735571B45308C00DF0109 /* AppDelegate.m */; };
 		F9F7355E1B45308C00DF0109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F7355C1B45308C00DF0109 /* Main.storyboard */; };
@@ -824,6 +824,7 @@
 		F9012C041B5F903700B027C3 /* BossBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossBean.m; sourceTree = "<group>"; };
 		F9012C071B5F911100B027C3 /* BossActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossActivity.h; sourceTree = "<group>"; };
 		F9012C081B5F911100B027C3 /* BossActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossActivity.m; sourceTree = "<group>"; };
+		F90424781B631BAF0030692B /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		F9101B341B55EF4B00740A32 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
 		F97821D91B5E1E0F0027ABAD /* BossItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BossItem.xib; sourceTree = "<group>"; };
 		F97821DE1B5E1EAB0027ABAD /* BossItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossItemCell.h; sourceTree = "<group>"; };
@@ -1514,7 +1515,6 @@
 		F9F5B9A91B61D3B100607181 /* star3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star3@2x.png"; sourceTree = "<group>"; };
 		F9F5B9AA1B61D3B100607181 /* star2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star2@2x.png"; sourceTree = "<group>"; };
 		F9F5B9AF1B61E83100607181 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
-		F9F5B9B31B62332600607181 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		F9F7354F1B45308C00DF0109 /* Isaac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Isaac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F735531B45308C00DF0109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9F735541B45308C00DF0109 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1638,6 +1638,20 @@
 			name = tab2;
 			sourceTree = "<group>";
 		};
+		F904247A1B63288E0030692B /* tab3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tab3;
+			sourceTree = "<group>";
+		};
+		F90424F61B6360D10030692B /* small */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = small;
+			sourceTree = "<group>";
+		};
 		F9F258311B461AD5004240A0 /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -1659,7 +1673,7 @@
 		F9F258441B4624E4004240A0 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				F9F5B9B31B62332600607181 /* back@2x.png */,
+				F90424781B631BAF0030692B /* back@2x.png */,
 				F9F5B9AF1B61E83100607181 /* menu@2x.png */,
 				F9F5B9A81B61D3B100607181 /* star1@2x.png */,
 				F9F5B9A91B61D3B100607181 /* star3@2x.png */,
@@ -1672,6 +1686,7 @@
 				F9F735831B453DCA00DF0109 /* more@2x.png */,
 				F9F735811B453CBF00DF0109 /* small@2x.png */,
 				F9F7357F1B453AF700DF0109 /* boss@2x.png */,
+				F90424F61B6360D10030692B /* small */,
 				F9012B261B5F8B7B00B027C3 /* boss */,
 				F9F258871B46256F004240A0 /* card */,
 				F9F258A91B46256F004240A0 /* gong */,
@@ -2512,6 +2527,7 @@
 				F9F2625F1B466760004240A0 /* view */,
 				F9F2625B1B4666A5004240A0 /* tab1 */,
 				F9012C061B5F90C200B027C3 /* tab2 */,
+				F904247A1B63288E0030692B /* tab3 */,
 				F9F262541B463427004240A0 /* tools */,
 				F9F258311B461AD5004240A0 /* fmdb */,
 				F9F735871B45413300DF0109 /* db */,
@@ -2904,6 +2920,7 @@
 				F9F25F8B1B462D15004240A0 /* houner_image180.png in Resources */,
 				F9F261581B462D73004240A0 /* shou_image074.png in Resources */,
 				F9F25F4C1B462D15004240A0 /* houner_image117.png in Resources */,
+				F90424791B631BAF0030692B /* back@2x.png in Resources */,
 				F9F261361B462D73004240A0 /* shou_image040.png in Resources */,
 				F9012BFB1B5F8C7800B027C3 /* boss_49.jpg in Resources */,
 				F9F25E001B462CD3004240A0 /* gong_image037.png in Resources */,
@@ -3318,7 +3335,6 @@
 				F9F2624D1B462DB8004240A0 /* user_image015.png in Resources */,
 				F9012BF01B5F8C7800B027C3 /* boss_37.jpg in Resources */,
 				F9F25F741B462D15004240A0 /* houner_image157.png in Resources */,
-				F9F5B9B41B62332600607181 /* back@2x.png in Resources */,
 				F9F25FCF1B462D43004240A0 /* hung_image010.png in Resources */,
 				F9F261FB1B462D73004240A0 /* shou_image237.png in Resources */,
 				F9F261D51B462D73004240A0 /* shou_image199.png in Resources */,
