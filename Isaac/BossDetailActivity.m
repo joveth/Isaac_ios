@@ -78,8 +78,6 @@
     nameLabel.textColor = [UIColor blackColor];
     nameLabel.font = [UIFont systemFontOfSize:16.0];
     
-    
-    
     [scroll addSubview:nameLabel];
     [scroll addSubview:bossImageView];
     self.animationDuration = 0.25;

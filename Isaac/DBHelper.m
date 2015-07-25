@@ -19,6 +19,7 @@
 
 static const NSString *TB_ISAAC = @"tb_isaac";
 static const NSString *TB_BOSS = @"tb_isaac_boss";
+static const NSString *TB_SMALL = @"tb_isaac_small";
 
 @implementation DBHelper
 +(id)sharedInstance{
@@ -40,12 +41,16 @@ static const NSString *TB_BOSS = @"tb_isaac_boss";
     if ([db open]) {
         NSLog(@"打开成功");
         // 2.1创建表
-        NSString *sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(800),power varchar(20),unlock varchar(200),type char(1) )";
+        NSString *sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(1200),power varchar(20),unlock varchar(200),type char(1) )";
         BOOL success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_ISAAC]];
         
-        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500),score varchar(5))";
+        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(1000),score varchar(5))";
         
         success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_BOSS]];
+        
+        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500))";
+        
+        success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_SMALL]];
         
         return success;
     }else{
@@ -176,6 +181,28 @@ static const NSString *TB_BOSS = @"tb_isaac_boss";
         bean.enName = dict[@"enname"];
         bean.content = dict[@"content"];
         bean.score = dict[@"score"];
+        [ret addObject:bean];
+    }
+    [rs close];
+    [db close];
+    return ret;
+}
+-(NSMutableArray *)getSmall:(NSString *)offset{
+    NSMutableArray *ret = [[NSMutableArray alloc] init];
+    if(![db open])
+    {
+        return ret;
+    }
+    FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"select * from %@ ",TB_SMALL]];
+    BossBean *bean;
+    while ([rs next]) {
+        NSDictionary *dict = [rs resultDictionary];
+        bean = [[BossBean alloc] init];
+        bean.sid = dict[@"id"];
+        bean.image = dict[@"image"];
+        bean.name = dict[@"name"];
+        bean.enName = dict[@"enname"];
+        bean.content = dict[@"content"];
         [ret addObject:bean];
     }
     [rs close];

@@ -24,6 +24,7 @@
             [db initData];
         }
     }
+    
     return YES;
 }
 
