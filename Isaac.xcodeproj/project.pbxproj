@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C7671391B647B03002C191C /* MoreActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7671381B647B03002C191C /* MoreActivity.m */; };
 		F9012BCC1B5F8C7800B027C3 /* boss_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012B951B5F8C7800B027C3 /* boss_1.jpg */; };
 		F9012BCD1B5F8C7800B027C3 /* boss_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012B961B5F8C7800B027C3 /* boss_2.jpg */; };
 		F9012BCE1B5F8C7800B027C3 /* boss_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012B971B5F8C7800B027C3 /* boss_3.jpg */; };
@@ -830,6 +831,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C7671371B647B03002C191C /* MoreActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreActivity.h; sourceTree = "<group>"; };
+		9C7671381B647B03002C191C /* MoreActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreActivity.m; sourceTree = "<group>"; };
 		F9012B951B5F8C7800B027C3 /* boss_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boss_1.jpg; sourceTree = "<group>"; };
 		F9012B961B5F8C7800B027C3 /* boss_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boss_2.jpg; sourceTree = "<group>"; };
 		F9012B971B5F8C7800B027C3 /* boss_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boss_3.jpg; sourceTree = "<group>"; };
@@ -1696,6 +1699,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C7671361B647AC8002C191C /* tab4 */ = {
+			isa = PBXGroup;
+			children = (
+				9C7671371B647B03002C191C /* MoreActivity.h */,
+				9C7671381B647B03002C191C /* MoreActivity.m */,
+			);
+			name = tab4;
+			sourceTree = "<group>";
+		};
 		F9012B261B5F8B7B00B027C3 /* boss */ = {
 			isa = PBXGroup;
 			children = (
@@ -2720,6 +2732,7 @@
 		F9F735511B45308C00DF0109 /* Isaac */ = {
 			isa = PBXGroup;
 			children = (
+				9C7671361B647AC8002C191C /* tab4 */,
 				F9F5B95F1B61C91000607181 /* pkmenu */,
 				F9F2625F1B466760004240A0 /* view */,
 				F9F2625B1B4666A5004240A0 /* tab1 */,
@@ -3686,6 +3699,7 @@
 				F9F5B9991B61C97B00607181 /* PKLog.m in Sources */,
 				F9F5B9911B61C97B00607181 /* CAAnimation+PKIdentifier.m in Sources */,
 				F9F5B9971B61C97B00607181 /* PKLayerAnimator.m in Sources */,
+				9C7671391B647B03002C191C /* MoreActivity.m in Sources */,
 				F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */,
 				F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */,
 				F9FFE8FC1B608EBE006F138E /* BossFlowLayout.m in Sources */,

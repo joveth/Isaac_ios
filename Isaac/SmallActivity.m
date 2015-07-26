@@ -56,26 +56,27 @@
     }
     if(bImg==nil){
         bImg =[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
-        [bImg.layer setCornerRadius:25];
+        [bImg.layer setCornerRadius:20];
         [bImg.layer setMasksToBounds:YES];
         [cell addSubview:bImg];
         bImg.tag=1;
     }
     if(nameLab==nil){
-        nameLab = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, screenWidth-60, 40)];
+        nameLab = [[UILabel alloc] initWithFrame:CGRectMake(60, 10, screenWidth-60, 22)];
+        nameLab.textColor=[UIColor blackColor];
         [cell addSubview:nameLab];
         nameLab.tag=2;
     }
     if(contLab==nil){
-        nameLab = [[UILabel alloc] initWithFrame:CGRectMake(60, 60, screenWidth-70, 50)];
+        contLab = [[UILabel alloc] initWithFrame:CGRectMake(60, 42, screenWidth-70, 50)];
         contLab.numberOfLines=0;
         contLab.lineBreakMode = NSLineBreakByWordWrapping;
-        [cell addSubview:nameLab];
-        nameLab.tag=3;
+        [cell addSubview:contLab];
+        contLab.tag=3;
     }
     BossBean *temp = [list objectAtIndex:indexPath.row];
     if(temp){
-        nameLab.text = temp.name;
+        nameLab.text = [NSString stringWithFormat:@"%@(%@)",temp.name,temp.enName];
         //cell.imageView.image = [UIImage imageNamed:temp.image];
         bImg.image = [UIImage imageNamed:temp.image];
         CGSize size=[temp.content sizeWithAttributes:attributes];
@@ -91,13 +92,35 @@
                 line = t;
             }
         }
-        bImg.frame = CGRectMake(10, 10+line*size.height, 40, 40);
+        bImg.frame = CGRectMake(10, line*size.height/2+20, 40, 40);
         contLab.text = temp.content;
         [contLab setFont:[UIFont systemFontOfSize:16.0]];
-        contLab.frame = CGRectMake(60, 60, screenWidth-70, line*size.height+40);
+        contLab.frame = CGRectMake(60, 36, screenWidth-70, line*size.height+24);
     }
 
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([list count]>0){
+        BossBean *temp = [list objectAtIndex:indexPath.row];
+        if(temp){
+            CGSize size=[temp.content sizeWithAttributes:attributes];
+            CGFloat line = size.width/(screenWidth-70);
+            if(line<1){
+                line=1;
+            }else{
+                NSString *th = [NSString stringWithFormat:@"%0.0f",line];
+                NSInteger t = th.integerValue;
+                if(line-t>0){
+                    line  = t+1;
+                }else{
+                    line = t;
+                }
+            }
+            return line*size.height+82;
+        }
+    }
+    return 44;
 }
 
 -(void)loadData{
