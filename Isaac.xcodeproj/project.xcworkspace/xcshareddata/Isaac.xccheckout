@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>55DA8B98-2ADD-4D67-9EAB-D38AC39050F5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Isaac</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6066868A7905F76F20072D1D83F868680199DD9C</key>
 		<string>https://github.com/joveth/Isaac_ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Isaac.xcodeproj</string>
+	<string>Isaac.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6066868A7905F76F20072D1D83F868680199DD9C</key>

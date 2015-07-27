@@ -100,6 +100,7 @@
     return cell;
 }
 
+
 -(void)loadData{
     list = [db getSmall:@"1"];
     [self.tableView reloadData];
