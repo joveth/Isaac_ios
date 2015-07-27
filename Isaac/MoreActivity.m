@@ -7,6 +7,7 @@
 //
 
 #import "MoreActivity.h"
+#import "Common.h"
 
 @interface MoreActivity ()
 
@@ -16,12 +17,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.backgroundColor=[Common colorWithHexString:@"#e0e0e0"];
+    self.tableView.tableFooterView = [[UIView alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *myHeader = [[UIView alloc] init];
+    UILabel *myLabel = [[UILabel alloc] init];
+    [myLabel setFrame:CGRectMake(8, 0, 200, 10)];
+    [myLabel setTag:101];
+    [myLabel setAlpha:0.5];
+    [myLabel setFont: [UIFont fontWithName:@"Arial" size:14]];
+    [myLabel setBackgroundColor:[UIColor clearColor]];
+    [myHeader setBackgroundColor:[Common colorWithHexString:@"#e0e0e0"]];
+    [myLabel setText:[NSString stringWithFormat:@" "]];
+    [myHeader addSubview:myLabel];
+    
+    return myHeader;
+}
 @end

@@ -20,13 +20,19 @@
     UISearchBar *searchHeader;
     UIButton *rightBtn;
     UIButton *leftBtn;
+    NSArray *titleArr ;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     contentList  =[[NSMutableArray alloc] init];
     db = [DBHelper sharedInstance];
-    
+    titleArr= [[NSArray alloc] initWithObjects:@"全部",@"主动", @"被动",@"饰品",@"塔牌",@"符文",@"胶囊",@"人物",@"成就", nil];
+    leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(2, 24, 35, 36)];
+    leftBtn.titleLabel.font=[UIFont systemFontOfSize:15];
+    [leftBtn setTitle:@"全部" forState:UIControlStateNormal];
+    [leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [leftBtn addTarget:self  action:@selector(showMenu) forControlEvents:UIControlEventTouchDown];
     [self loadData];
 }
 -(void)reginText{
@@ -74,7 +80,7 @@
     
     IsaacBean *bean = [contentList objectAtIndex:indexPath.row];
     if(bean){
-        nameLabel.text = bean.name;
+        nameLabel.text = [NSString stringWithFormat:@"%@(%@)",bean.name,bean.enName];
         if(![Common isEmptyString:bean.image]){
             image.image = [UIImage imageNamed:bean.image];
             image.frame = CGRectMake(8, cell.frame.size.height-18, 30, 30);
@@ -84,7 +90,7 @@
             CGFloat width = [UIScreen mainScreen].applicationFrame.size.width-55;
             CGFloat lines = size.width/width;
             //            NSString *temp = [NSString stringWithFormat:@"%0.0f",lines];
-            contentLabel.frame=CGRectMake(50, 30, self.view.frame.size.width-55, size.height*(lines+1));
+            contentLabel.frame=CGRectMake(50, 30, self.view.frame.size.width-55, size.height*(lines+1)+44);
             contentLabel.text = bean.content;
         }else{
             image.frame = CGRectMake(8, 8, 30, 30);
@@ -101,7 +107,7 @@
             CGFloat width = [UIScreen mainScreen].applicationFrame.size.width-55;
             CGFloat lines = size.width/width;
             //NSString *temp = [NSString stringWithFormat:@"%0.0f",lines];
-            return size.height*(lines+1)+44;
+            return size.height*(lines+1)+60;
         }
         
     }
@@ -126,14 +132,11 @@
 
     UIView *inHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 73)];
     inHeaderView.backgroundColor = [UIColor whiteColor];
-    leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(2, 24, 35, 36)];
-    leftBtn.titleLabel.font=[UIFont systemFontOfSize:15];
-    [leftBtn setTitle:@"全部" forState:UIControlStateNormal];
-    [leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
     rightBtn = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-35, 26, 30, 30)];
     [rightBtn setImage:[UIImage imageNamed:@"scan.png"] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(onClickScan) forControlEvents:UIControlEventTouchDown];
-    [leftBtn addTarget:self  action:@selector(showMenu) forControlEvents:UIControlEventTouchDown];
+    
     [inHeaderView addSubview:leftBtn];
     [inHeaderView addSubview:rightBtn];
     [inHeaderView addSubview:searchHeader];
@@ -200,14 +203,17 @@
     [searchHeader resignFirstResponder];
     UIActionSheet *sheet = [[UIActionSheet alloc]initWithTitle:@"请选择" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"全部",@"主动", @"被动",@"饰品",@"塔牌",@"符文",@"胶囊",@"人物",@"成就",nil];
     [sheet setActionSheetStyle:UIActionSheetStyleBlackOpaque];
+    
     [sheet showInView:[self.view window]];
 }
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==0){
         contentList = [db getIsaacs:@"1"];
+        [leftBtn setTitle:@"全部" forState:UIControlStateNormal];
         [self.tableView reloadData];
     }else if(buttonIndex!=9) {
         contentList=[db getIsaacsByType:[NSString stringWithFormat:@"%ld",(long)buttonIndex]];
+        [leftBtn setTitle:[titleArr objectAtIndex:buttonIndex] forState:UIControlStateNormal];
         [self.tableView reloadData];
     }
 }

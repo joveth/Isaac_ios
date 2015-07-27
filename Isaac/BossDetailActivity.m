@@ -174,7 +174,7 @@
     
     BossBean *temp = [contentList objectAtIndex:indexPath.row];
     if(temp){
-        nameLab.text = temp.name;
+        nameLab.text = [NSString stringWithFormat:@"%@(%@)",temp.name,temp.enName];
         //cell.imageView.image = [UIImage imageNamed:temp.image];
         bImg.image = [UIImage imageNamed:temp.image];
     }
