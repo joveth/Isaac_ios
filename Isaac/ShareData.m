@@ -10,6 +10,7 @@
 
 @implementation ShareData
 @synthesize bossBean;
+@synthesize type;
 static ShareData *instance;
 +(ShareData *)shareInstance{
     if(instance==nil){

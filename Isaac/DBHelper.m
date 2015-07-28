@@ -20,6 +20,7 @@
 static const NSString *TB_ISAAC = @"tb_isaac";
 static const NSString *TB_BOSS = @"tb_isaac_boss";
 static const NSString *TB_SMALL = @"tb_isaac_small";
+static const NSString *TB_OTHER = @"tb_other";
 
 @implementation DBHelper
 +(id)sharedInstance{
@@ -51,6 +52,10 @@ static const NSString *TB_SMALL = @"tb_isaac_small";
         sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(500))";
         
         success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_SMALL]];
+        
+        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(1000),type char(1))";
+        
+        success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_OTHER]];
         
         return success;
     }else{
@@ -209,5 +214,25 @@ static const NSString *TB_SMALL = @"tb_isaac_small";
     [db close];
     return ret;
 }
-
+-(NSMutableArray *)getOtherByType:(NSString *)type{
+    NSMutableArray *ret = [[NSMutableArray alloc] init];
+    if(![db open])
+    {
+        return ret;
+    }
+    FMResultSet *rs = [db executeQuery:[NSString stringWithFormat:@"select * from %@  where type=? ",TB_OTHER],type];
+    IsaacBean *bean;
+    while ([rs next]) {
+        NSDictionary *dict = [rs resultDictionary];
+        bean = [[IsaacBean alloc] init];
+        bean.image = dict[@"image"];
+        bean.name = dict[@"name"];
+        bean.enName = dict[@"enname"];
+        bean.content = dict[@"content"];
+        [ret addObject:bean];
+    }
+    [rs close];
+    [db close];
+    return ret;
+}
 @end

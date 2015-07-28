@@ -255,6 +255,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="更多" id="3zv-Hh-6qz"/>
+                    <connections>
+                        <segue destination="mWK-6M-9Sn" kind="show" identifier="toDetail" id="Y0v-Le-gLH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bN9-K1-Xct" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -283,6 +286,41 @@
             </objects>
             <point key="canvasLocation" x="942" y="2153"/>
         </scene>
+        <!--更多内部UI-->
+        <scene sceneID="ArV-cc-WGT">
+            <objects>
+                <tableViewController title="更多内部UI" id="2xa-pU-jia" customClass="AboutSomething" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kgE-GU-s3W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TH8-AB-EFE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TH8-AB-EFE" id="cyN-gi-289">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2xa-pU-jia" id="wrC-Ht-rLs"/>
+                            <outlet property="delegate" destination="2xa-pU-jia" id="9YO-9O-VZE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="关于" id="E86-c9-WiP">
+                        <barButtonItem key="leftBarButtonItem" image="close.png" id="2rt-Il-aoS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="28M-ii-Qqv" kind="unwind" unwindAction="toMoreMng:" id="1BX-kw-wgN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HqH-or-fDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="28M-ii-Qqv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="3473"/>
+        </scene>
         <!--其他导航-->
         <scene sceneID="HmX-D8-KQf">
             <objects>
@@ -306,9 +344,32 @@
             </objects>
             <point key="canvasLocation" x="942" y="2806"/>
         </scene>
+        <!--更多内部导航-->
+        <scene sceneID="xbk-TP-gWw">
+            <objects>
+                <navigationController title="更多内部导航" automaticallyAdjustsScrollViewInsets="NO" id="mWK-6M-9Sn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BAJ-eN-qJa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.19692449309999999" blue="0.086389098220000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2xa-pU-jia" kind="relationship" relationship="rootViewController" id="mEm-r0-ZDb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5z-fo-pIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="3473"/>
+        </scene>
     </scenes>
     <resources>
         <image name="boss.png" width="30" height="30"/>
+        <image name="close.png" width="32" height="32"/>
         <image name="more.png" width="30" height="30"/>
         <image name="search.png" width="30" height="30"/>
         <image name="small.png" width="30" height="30"/>

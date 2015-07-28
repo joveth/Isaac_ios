@@ -8,6 +8,7 @@
 
 #import "MoreActivity.h"
 #import "Common.h"
+#import "ShareData.h"
 
 @interface MoreActivity ()
 
@@ -40,4 +41,16 @@
     
     return myHeader;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section==0){
+        [ShareData shareInstance].type=[NSString stringWithFormat:@"%ld",(indexPath.row+1)];
+        [self performSegueWithIdentifier:@"toDetail" sender:nil];
+        return;
+    }
+}
+- (IBAction)toMoreMng:(UIStoryboardSegue *)segue
+{
+    [[segue sourceViewController] class];
+}
+
 @end

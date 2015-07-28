@@ -12,5 +12,6 @@
 @interface ShareData : NSObject
 
 @property(atomic,retain) BossBean *bossBean;
+@property(atomic,retain) NSString *type;
 +(ShareData *) shareInstance;
 @end

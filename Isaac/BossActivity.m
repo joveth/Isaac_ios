@@ -14,6 +14,7 @@
 #import "RatingView.h"
 #import "ShareData.h"
 #import "BossDetailActivity.h"
+#import "Common.h"
 
 @interface BossActivity ()
 
@@ -30,6 +31,7 @@ static NSInteger const nameLabel = 1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.collectionView registerClass:[BossItemCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    //self.collectionView.backgroundColor =[Common colorWithHexString:@"eb4f38"];
     contentList  =[[NSMutableArray alloc] init];
     self.collectionView.delegate =self;
     self.collectionView.dataSource = self;
