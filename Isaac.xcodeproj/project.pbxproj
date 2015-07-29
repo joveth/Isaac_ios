@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C7671391B647B03002C191C /* MoreActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7671381B647B03002C191C /* MoreActivity.m */; };
+		9CF26DBA1B67A198009A2152 /* AboutMeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF26DB91B67A198009A2152 /* AboutMeActivity.m */; };
 		F9012BCC1B5F8C7800B027C3 /* boss_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012B951B5F8C7800B027C3 /* boss_1.jpg */; };
 		F9012BCD1B5F8C7800B027C3 /* boss_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012B961B5F8C7800B027C3 /* boss_2.jpg */; };
 		F9012BCE1B5F8C7800B027C3 /* boss_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9012B971B5F8C7800B027C3 /* boss_3.jpg */; };
@@ -884,6 +885,8 @@
 /* Begin PBXFileReference section */
 		9C7671371B647B03002C191C /* MoreActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreActivity.h; sourceTree = "<group>"; };
 		9C7671381B647B03002C191C /* MoreActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreActivity.m; sourceTree = "<group>"; };
+		9CF26DB81B67A198009A2152 /* AboutMeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeActivity.h; sourceTree = "<group>"; };
+		9CF26DB91B67A198009A2152 /* AboutMeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeActivity.m; sourceTree = "<group>"; };
 		F9012B951B5F8C7800B027C3 /* boss_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boss_1.jpg; sourceTree = "<group>"; };
 		F9012B961B5F8C7800B027C3 /* boss_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boss_2.jpg; sourceTree = "<group>"; };
 		F9012B971B5F8C7800B027C3 /* boss_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boss_3.jpg; sourceTree = "<group>"; };
@@ -1809,6 +1812,8 @@
 				9C7671381B647B03002C191C /* MoreActivity.m */,
 				F9F54F1E1B671B1A00443C9A /* AboutSomething.h */,
 				F9F54F1F1B671B1A00443C9A /* AboutSomething.m */,
+				9CF26DB81B67A198009A2152 /* AboutMeActivity.h */,
+				9CF26DB91B67A198009A2152 /* AboutMeActivity.m */,
 			);
 			name = tab4;
 			sourceTree = "<group>";
@@ -3919,6 +3924,7 @@
 				F9F2583F1B461AD5004240A0 /* FMDatabasePool.m in Sources */,
 				F9F5B9961B61C97B00607181 /* PKAnimation.m in Sources */,
 				F9F735551B45308C00DF0109 /* main.m in Sources */,
+				9CF26DBA1B67A198009A2152 /* AboutMeActivity.m in Sources */,
 				F9F5B9951B61C97B00607181 /* PKRevealControllerView.m in Sources */,
 				F9F5B9941B61C97B00607181 /* UIViewController+PKRevealController.m in Sources */,
 				F9F258401B461AD5004240A0 /* FMDatabaseQueue.m in Sources */,
