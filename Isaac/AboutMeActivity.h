@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLKTextView.h"
+#import "SKPSMTPMessage.h"
 
-@interface AboutMeActivity : UITableViewController
+@interface AboutMeActivity : UITableViewController<UITextViewDelegate,SKPSMTPMessageDelegate>
 
 @end

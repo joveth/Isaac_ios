@@ -267,13 +267,13 @@
         <!--关于作者-->
         <scene sceneID="fFP-cu-4hJ">
             <objects>
-                <tableViewController id="vqr-YM-ntP" sceneMemberID="viewController">
+                <tableViewController id="vqr-YM-ntP" customClass="AboutMeActivity" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gfo-eg-uU4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle=" " id="5p9-jQ-VLi">
+                            <tableViewSection id="5p9-jQ-VLi">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="9pS-by-8UC" style="IBUITableViewCellStyleDefault" id="z05-vU-sjF">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -321,7 +321,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="软件声明" id="m98-sH-tkS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="8Et-G2-axX" style="IBUITableViewCellStyleDefault" id="hzY-Ju-xQ2">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="8Et-G2-axX" rowHeight="80" style="IBUITableViewCellStyleDefault" id="hzY-Ju-xQ2">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hzY-Ju-xQ2" id="bd2-ef-SOv">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -339,14 +339,14 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="作者的话" id="BqB-k3-Cuf">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="OaG-fU-RuZ" style="IBUITableViewCellStyleDefault" id="D9R-43-t60">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="OaG-fU-RuZ" rowHeight="170" style="IBUITableViewCellStyleDefault" id="D9R-43-t60">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D9R-43-t60" id="2f8-vw-u3Z">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OaG-fU-RuZ">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">作为一名开发者，我不是什么大神，没有什么年薪几十万的薪资，也没有无私奉献的精神，且不说，一套苹果设备有多贵，就是想要开发APP，也要99刀，好吧，当我以为99美刀就能无限使用的时候，还窃以为不算很贵，然而，没想到是，每年都要这么多，我真是不想多说什么了，所以，各位土豪们，只能委屈你们了</string>
+                                                    <string key="text">作为一名开发者，我不是什么大神，薪资很低，也没有无私奉献的精神，且不说，一套苹果设备有多贵，就是想要开发APP，也要99刀，好吧，当我以为99美刀就能无限使用的时候，还窃以为不算很贵，然而，没想到是，每年都要这么多，我真是不想多说什么了，所以，各位土豪们，只能委屈你们了</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -356,12 +356,40 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="作者的话" id="f01-MR-gXu">
+                            <tableViewSection headerTitle="给我留言" id="f01-MR-gXu">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Lcc-Q7-ee6">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="Lcc-Q7-ee6">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lcc-Q7-ee6" id="H9E-Qm-FbY">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfh-jK-oX7" customClass="SLKTextView">
+                                                    <rect key="frame" x="8" y="0.0" width="600" height="99"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle=" " id="nlq-uf-LOT">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="IKy-wx-u62" style="IBUITableViewCellStyleDefault" id="ETa-H6-rGL">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ETa-H6-rGL" id="N4f-wJ-cnh">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="发送" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IKy-wx-u62">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.19692449309999999" blue="0.086389098220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.19692449309999999" blue="0.086389098220000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -380,6 +408,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTxt" destination="nfh-jK-oX7" id="B3y-qJ-Aie"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLC-gC-3gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bDF-2C-pbI" userLabel="Exit" sceneMemberID="exit"/>
@@ -489,14 +520,15 @@
             </objects>
             <point key="canvasLocation" x="942" y="3473"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--关于作者导航-->
         <scene sceneID="8id-rS-d4r">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nHh-km-z2c" sceneMemberID="viewController">
+                <navigationController title="关于作者导航" automaticallyAdjustsScrollViewInsets="NO" id="nHh-km-z2c" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hsa-dx-z8g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.19692449309999999" blue="0.086389098220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>

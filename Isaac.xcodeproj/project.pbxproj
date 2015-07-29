@@ -132,6 +132,20 @@
 		F90425F01B638A630030692B /* small_63.png in Resources */ = {isa = PBXBuildFile; fileRef = F90425ED1B638A630030692B /* small_63.png */; };
 		F90425F31B638BF70030692B /* SmallActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F90425F21B638BF70030692B /* SmallActivity.m */; };
 		F9101B351B55EF4B00740A32 /* scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9101B341B55EF4B00740A32 /* scan@2x.png */; };
+		F927B83F1B6864B800D11A0D /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8351B6864B800D11A0D /* SLKInputAccessoryView.m */; };
+		F927B8401B6864B800D11A0D /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8371B6864B800D11A0D /* SLKTextInputbar.m */; };
+		F927B8411B6864B800D11A0D /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8391B6864B800D11A0D /* SLKTextView.m */; };
+		F927B8421B6864B800D11A0D /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B83B1B6864B800D11A0D /* SLKTextViewController.m */; };
+		F927B8431B6864B800D11A0D /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B83E1B6864B800D11A0D /* SLKTypingIndicatorView.m */; };
+		F927B84D1B6864DF00D11A0D /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8451B6864DF00D11A0D /* SLKTextView+SLKAdditions.m */; };
+		F927B84E1B6864DF00D11A0D /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8481B6864DF00D11A0D /* UIResponder+SLKAdditions.m */; };
+		F927B84F1B6864DF00D11A0D /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B84A1B6864DF00D11A0D /* UIScrollView+SLKAdditions.m */; };
+		F927B8501B6864DF00D11A0D /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B84C1B6864DF00D11A0D /* UIView+SLKAdditions.m */; };
+		F927B85C1B686AB600D11A0D /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8531B686AB600D11A0D /* Base64Transcoder.m */; };
+		F927B85D1B686AB600D11A0D /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8551B686AB600D11A0D /* HSK_CFUtilities.m */; };
+		F927B85E1B686AB600D11A0D /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8571B686AB600D11A0D /* NSData+Base64Additions.m */; };
+		F927B85F1B686AB600D11A0D /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B8591B686AB600D11A0D /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F927B8601B686AB600D11A0D /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B85B1B686AB600D11A0D /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F97821DA1B5E1E0F0027ABAD /* BossItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97821D91B5E1E0F0027ABAD /* BossItem.xib */; };
 		F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */; };
 		F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258331B461AD5004240A0 /* FMDatabase.m */; };
@@ -1013,6 +1027,36 @@
 		F90425F11B638BF70030692B /* SmallActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallActivity.h; sourceTree = "<group>"; };
 		F90425F21B638BF70030692B /* SmallActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallActivity.m; sourceTree = "<group>"; };
 		F9101B341B55EF4B00740A32 /* scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scan@2x.png"; sourceTree = "<group>"; };
+		F927B8341B6864B800D11A0D /* SLKInputAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKInputAccessoryView.h; sourceTree = "<group>"; };
+		F927B8351B6864B800D11A0D /* SLKInputAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKInputAccessoryView.m; sourceTree = "<group>"; };
+		F927B8361B6864B800D11A0D /* SLKTextInputbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextInputbar.h; sourceTree = "<group>"; };
+		F927B8371B6864B800D11A0D /* SLKTextInputbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextInputbar.m; sourceTree = "<group>"; };
+		F927B8381B6864B800D11A0D /* SLKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextView.h; sourceTree = "<group>"; };
+		F927B8391B6864B800D11A0D /* SLKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextView.m; sourceTree = "<group>"; };
+		F927B83A1B6864B800D11A0D /* SLKTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTextViewController.h; sourceTree = "<group>"; };
+		F927B83B1B6864B800D11A0D /* SLKTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTextViewController.m; sourceTree = "<group>"; };
+		F927B83C1B6864B800D11A0D /* SLKTypingIndicatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorProtocol.h; sourceTree = "<group>"; };
+		F927B83D1B6864B800D11A0D /* SLKTypingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKTypingIndicatorView.h; sourceTree = "<group>"; };
+		F927B83E1B6864B800D11A0D /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKTypingIndicatorView.m; sourceTree = "<group>"; };
+		F927B8441B6864DF00D11A0D /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
+		F927B8451B6864DF00D11A0D /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
+		F927B8461B6864DF00D11A0D /* SLKUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKUIConstants.h; sourceTree = "<group>"; };
+		F927B8471B6864DF00D11A0D /* UIResponder+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+SLKAdditions.h"; sourceTree = "<group>"; };
+		F927B8481B6864DF00D11A0D /* UIResponder+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+SLKAdditions.m"; sourceTree = "<group>"; };
+		F927B8491B6864DF00D11A0D /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
+		F927B84A1B6864DF00D11A0D /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
+		F927B84B1B6864DF00D11A0D /* UIView+SLKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SLKAdditions.h"; sourceTree = "<group>"; };
+		F927B84C1B6864DF00D11A0D /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
+		F927B8521B686AB600D11A0D /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		F927B8531B686AB600D11A0D /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
+		F927B8541B686AB600D11A0D /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		F927B8551B686AB600D11A0D /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
+		F927B8561B686AB600D11A0D /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		F927B8571B686AB600D11A0D /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		F927B8581B686AB600D11A0D /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		F927B8591B686AB600D11A0D /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		F927B85A1B686AB600D11A0D /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		F927B85B1B686AB600D11A0D /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
 		F97821D91B5E1E0F0027ABAD /* BossItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BossItem.xib; sourceTree = "<group>"; };
 		F97821DE1B5E1EAB0027ABAD /* BossItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossItemCell.h; sourceTree = "<group>"; };
 		F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossItemCell.m; sourceTree = "<group>"; };
@@ -1971,6 +2015,50 @@
 			path = small;
 			sourceTree = "<group>";
 		};
+		F927B8331B68646300D11A0D /* TextFieldLib */ = {
+			isa = PBXGroup;
+			children = (
+				F927B8441B6864DF00D11A0D /* SLKTextView+SLKAdditions.h */,
+				F927B8451B6864DF00D11A0D /* SLKTextView+SLKAdditions.m */,
+				F927B8461B6864DF00D11A0D /* SLKUIConstants.h */,
+				F927B8471B6864DF00D11A0D /* UIResponder+SLKAdditions.h */,
+				F927B8481B6864DF00D11A0D /* UIResponder+SLKAdditions.m */,
+				F927B8491B6864DF00D11A0D /* UIScrollView+SLKAdditions.h */,
+				F927B84A1B6864DF00D11A0D /* UIScrollView+SLKAdditions.m */,
+				F927B84B1B6864DF00D11A0D /* UIView+SLKAdditions.h */,
+				F927B84C1B6864DF00D11A0D /* UIView+SLKAdditions.m */,
+				F927B8341B6864B800D11A0D /* SLKInputAccessoryView.h */,
+				F927B8351B6864B800D11A0D /* SLKInputAccessoryView.m */,
+				F927B8361B6864B800D11A0D /* SLKTextInputbar.h */,
+				F927B8371B6864B800D11A0D /* SLKTextInputbar.m */,
+				F927B8381B6864B800D11A0D /* SLKTextView.h */,
+				F927B8391B6864B800D11A0D /* SLKTextView.m */,
+				F927B83A1B6864B800D11A0D /* SLKTextViewController.h */,
+				F927B83B1B6864B800D11A0D /* SLKTextViewController.m */,
+				F927B83C1B6864B800D11A0D /* SLKTypingIndicatorProtocol.h */,
+				F927B83D1B6864B800D11A0D /* SLKTypingIndicatorView.h */,
+				F927B83E1B6864B800D11A0D /* SLKTypingIndicatorView.m */,
+			);
+			name = TextFieldLib;
+			sourceTree = "<group>";
+		};
+		F927B8511B686AB600D11A0D /* SMTPLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				F927B8521B686AB600D11A0D /* Base64Transcoder.h */,
+				F927B8531B686AB600D11A0D /* Base64Transcoder.m */,
+				F927B8541B686AB600D11A0D /* HSK_CFUtilities.h */,
+				F927B8551B686AB600D11A0D /* HSK_CFUtilities.m */,
+				F927B8561B686AB600D11A0D /* NSData+Base64Additions.h */,
+				F927B8571B686AB600D11A0D /* NSData+Base64Additions.m */,
+				F927B8581B686AB600D11A0D /* NSStream+SKPSMTPExtensions.h */,
+				F927B8591B686AB600D11A0D /* NSStream+SKPSMTPExtensions.m */,
+				F927B85A1B686AB600D11A0D /* SKPSMTPMessage.h */,
+				F927B85B1B686AB600D11A0D /* SKPSMTPMessage.m */,
+			);
+			path = SMTPLibrary;
+			sourceTree = "<group>";
+		};
 		F9F258311B461AD5004240A0 /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -2843,6 +2931,8 @@
 		F9F735511B45308C00DF0109 /* Isaac */ = {
 			isa = PBXGroup;
 			children = (
+				F927B8511B686AB600D11A0D /* SMTPLibrary */,
+				F927B8331B68646300D11A0D /* TextFieldLib */,
 				9C7671361B647AC8002C191C /* tab4 */,
 				F9F5B95F1B61C91000607181 /* pkmenu */,
 				F9F2625F1B466760004240A0 /* view */,
@@ -3919,6 +4009,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9F735581B45308C00DF0109 /* AppDelegate.m in Sources */,
+				F927B84E1B6864DF00D11A0D /* UIResponder+SLKAdditions.m in Sources */,
 				F9FFE91F1B60DAE6006F138E /* ShareData.m in Sources */,
 				F9F5B9981B61C97B00607181 /* PKSequentialAnimation.m in Sources */,
 				F9F2583F1B461AD5004240A0 /* FMDatabasePool.m in Sources */,
@@ -3926,30 +4017,43 @@
 				F9F735551B45308C00DF0109 /* main.m in Sources */,
 				9CF26DBA1B67A198009A2152 /* AboutMeActivity.m in Sources */,
 				F9F5B9951B61C97B00607181 /* PKRevealControllerView.m in Sources */,
+				F927B84F1B6864DF00D11A0D /* UIScrollView+SLKAdditions.m in Sources */,
 				F9F5B9941B61C97B00607181 /* UIViewController+PKRevealController.m in Sources */,
 				F9F258401B461AD5004240A0 /* FMDatabaseQueue.m in Sources */,
 				F9F7358E1B45429700DF0109 /* DBHelper.m in Sources */,
 				F9F2625E1B4666D6004240A0 /* MainActivity.m in Sources */,
 				F9FFE91C1B60D9AF006F138E /* BossDetailActivity.m in Sources */,
+				F927B84D1B6864DF00D11A0D /* SLKTextView+SLKAdditions.m in Sources */,
+				F927B8431B6864B800D11A0D /* SLKTypingIndicatorView.m in Sources */,
 				F9F5B9991B61C97B00607181 /* PKLog.m in Sources */,
 				F9F5B9911B61C97B00607181 /* CAAnimation+PKIdentifier.m in Sources */,
+				F927B8421B6864B800D11A0D /* SLKTextViewController.m in Sources */,
+				F927B85D1B686AB600D11A0D /* HSK_CFUtilities.m in Sources */,
 				F9F5B9971B61C97B00607181 /* PKLayerAnimator.m in Sources */,
 				9C7671391B647B03002C191C /* MoreActivity.m in Sources */,
+				F927B8411B6864B800D11A0D /* SLKTextView.m in Sources */,
 				F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */,
 				F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */,
 				F9FFE8FC1B608EBE006F138E /* BossFlowLayout.m in Sources */,
 				F9F262571B46343C004240A0 /* Common.m in Sources */,
+				F927B85C1B686AB600D11A0D /* Base64Transcoder.m in Sources */,
 				F9012C051B5F903700B027C3 /* BossBean.m in Sources */,
+				F927B8401B6864B800D11A0D /* SLKTextInputbar.m in Sources */,
 				F9F258411B461AD5004240A0 /* FMResultSet.m in Sources */,
 				F9F5B9931B61C97B00607181 /* NSObject+PKBlocks.m in Sources */,
+				F927B85E1B686AB600D11A0D /* NSData+Base64Additions.m in Sources */,
 				F9F54F201B671B1A00443C9A /* AboutSomething.m in Sources */,
 				F9012C091B5F911100B027C3 /* BossActivity.m in Sources */,
 				F9FFE9131B60D1A1006F138E /* RatingView.m in Sources */,
 				F9F5B9921B61C97B00607181 /* CALayer+PKConvenienceAnimations.m in Sources */,
 				F90425F31B638BF70030692B /* SmallActivity.m in Sources */,
+				F927B85F1B686AB600D11A0D /* NSStream+SKPSMTPExtensions.m in Sources */,
+				F927B8501B6864DF00D11A0D /* UIView+SLKAdditions.m in Sources */,
 				F9F5B99A1B61C97B00607181 /* PKRevealController.m in Sources */,
+				F927B8601B686AB600D11A0D /* SKPSMTPMessage.m in Sources */,
 				F9F2583E1B461AD5004240A0 /* FMDatabaseAdditions.m in Sources */,
 				F9F2625A1B4634ED004240A0 /* IsaacBean.m in Sources */,
+				F927B83F1B6864B800D11A0D /* SLKInputAccessoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
