@@ -148,6 +148,13 @@
 		F927B8601B686AB600D11A0D /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = F927B85B1B686AB600D11A0D /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F97821DA1B5E1E0F0027ABAD /* BossItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F97821D91B5E1E0F0027ABAD /* BossItem.xib */; };
 		F97821E01B5E1EAB0027ABAD /* BossItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */; };
+		F9941FF41B69C72C008E13BF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F9941FF11B69C72C008E13BF /* SVProgressHUD.m */; };
+		F9941FF51B69C72C008E13BF /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9941FF31B69C72C008E13BF /* SVIndefiniteAnimatedView.m */; };
+		F9941FF71B69CACD008E13BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9941FF61B69CACD008E13BF /* QuartzCore.framework */; };
+		F9941FF91B69CB33008E13BF /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9941FF81B69CB33008E13BF /* SVProgressHUD.bundle */; };
+		F9941FFE1B6A23BD008E13BF /* 1.html in Resources */ = {isa = PBXBuildFile; fileRef = F9941FFB1B6A23BD008E13BF /* 1.html */; };
+		F9941FFF1B6A23BD008E13BF /* 2.html in Resources */ = {isa = PBXBuildFile; fileRef = F9941FFC1B6A23BD008E13BF /* 2.html */; };
+		F99420001B6A23BD008E13BF /* 3.html in Resources */ = {isa = PBXBuildFile; fileRef = F9941FFD1B6A23BD008E13BF /* 3.html */; };
 		F9F2583D1B461AD5004240A0 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258331B461AD5004240A0 /* FMDatabase.m */; };
 		F9F2583E1B461AD5004240A0 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258351B461AD5004240A0 /* FMDatabaseAdditions.m */; };
 		F9F2583F1B461AD5004240A0 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F258371B461AD5004240A0 /* FMDatabasePool.m */; };
@@ -1060,6 +1067,15 @@
 		F97821D91B5E1E0F0027ABAD /* BossItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BossItem.xib; sourceTree = "<group>"; };
 		F97821DE1B5E1EAB0027ABAD /* BossItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BossItemCell.h; sourceTree = "<group>"; };
 		F97821DF1B5E1EAB0027ABAD /* BossItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BossItemCell.m; sourceTree = "<group>"; };
+		F9941FF01B69C72C008E13BF /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		F9941FF11B69C72C008E13BF /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		F9941FF21B69C72C008E13BF /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		F9941FF31B69C72C008E13BF /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		F9941FF61B69CACD008E13BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F9941FF81B69CB33008E13BF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		F9941FFB1B6A23BD008E13BF /* 1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 1.html; sourceTree = "<group>"; };
+		F9941FFC1B6A23BD008E13BF /* 2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 2.html; sourceTree = "<group>"; };
+		F9941FFD1B6A23BD008E13BF /* 3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 3.html; sourceTree = "<group>"; };
 		F9F258321B461AD5004240A0 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		F9F258331B461AD5004240A0 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		F9F258341B461AD5004240A0 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -1835,6 +1851,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9941FF71B69CACD008E13BF /* QuartzCore.framework in Frameworks */,
 				F9F735891B45414800DF0109 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2057,6 +2074,27 @@
 				F927B85B1B686AB600D11A0D /* SKPSMTPMessage.m */,
 			);
 			path = SMTPLibrary;
+			sourceTree = "<group>";
+		};
+		F9941FEF1B69C71E008E13BF /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				F9941FF01B69C72C008E13BF /* SVProgressHUD.h */,
+				F9941FF11B69C72C008E13BF /* SVProgressHUD.m */,
+				F9941FF21B69C72C008E13BF /* SVIndefiniteAnimatedView.h */,
+				F9941FF31B69C72C008E13BF /* SVIndefiniteAnimatedView.m */,
+			);
+			name = SVG;
+			sourceTree = "<group>";
+		};
+		F9941FFA1B69E8F2008E13BF /* www */ = {
+			isa = PBXGroup;
+			children = (
+				F9941FFB1B6A23BD008E13BF /* 1.html */,
+				F9941FFC1B6A23BD008E13BF /* 2.html */,
+				F9941FFD1B6A23BD008E13BF /* 3.html */,
+			);
+			path = www;
 			sourceTree = "<group>";
 		};
 		F9F258311B461AD5004240A0 /* fmdb */ = {
@@ -2912,6 +2950,7 @@
 		F9F735461B45308C00DF0109 = {
 			isa = PBXGroup;
 			children = (
+				F9941FF81B69CB33008E13BF /* SVProgressHUD.bundle */,
 				F9F735511B45308C00DF0109 /* Isaac */,
 				F9F7356B1B45308C00DF0109 /* IsaacTests */,
 				F9F735501B45308C00DF0109 /* Products */,
@@ -2931,6 +2970,8 @@
 		F9F735511B45308C00DF0109 /* Isaac */ = {
 			isa = PBXGroup;
 			children = (
+				F9941FFA1B69E8F2008E13BF /* www */,
+				F9941FEF1B69C71E008E13BF /* SVG */,
 				F927B8511B686AB600D11A0D /* SMTPLibrary */,
 				F927B8331B68646300D11A0D /* TextFieldLib */,
 				9C7671361B647AC8002C191C /* tab4 */,
@@ -3004,6 +3045,7 @@
 		F9F7358B1B45416B00DF0109 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9941FF61B69CACD008E13BF /* QuartzCore.framework */,
 				F9F735881B45414800DF0109 /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
@@ -3162,6 +3204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9941FF91B69CB33008E13BF /* SVProgressHUD.bundle in Resources */,
 				F9F261841B462D73004240A0 /* shou_image118.png in Resources */,
 				F9F5B9B01B61E83100607181 /* menu@2x.png in Resources */,
 				F9F25DDE1B462CD3004240A0 /* gong_image003.png in Resources */,
@@ -3252,6 +3295,7 @@
 				F9F261441B462D73004240A0 /* shou_image054.png in Resources */,
 				F9F261ED1B462D73004240A0 /* shou_image223.png in Resources */,
 				F90425E41B636E550030692B /* small_58.jpg in Resources */,
+				F9941FFF1B6A23BD008E13BF /* 2.html in Resources */,
 				F9F25F281B462D15004240A0 /* houner_image081.png in Resources */,
 				F9F25E101B462CD3004240A0 /* gong_image053.png in Resources */,
 				F9F2611D1B462D73004240A0 /* shou_image015.png in Resources */,
@@ -3319,6 +3363,7 @@
 				F9F25F821B462D15004240A0 /* houner_image171.png in Resources */,
 				F9F2624A1B462DB8004240A0 /* user_image012.png in Resources */,
 				F9F261991B462D73004240A0 /* shou_image139.png in Resources */,
+				F99420001B6A23BD008E13BF /* 3.html in Resources */,
 				F9FAA9B81B66154700FCE8B6 /* roob_8.jpg in Resources */,
 				F9F25F1C1B462D15004240A0 /* houner_image069.png in Resources */,
 				F90425D61B636E550030692B /* small_44.jpg in Resources */,
@@ -3903,6 +3948,7 @@
 				F9F25E161B462CD3004240A0 /* gong_image059.png in Resources */,
 				F9F25FD91B462D43004240A0 /* hung_image020.png in Resources */,
 				F9F25E0F1B462CD3004240A0 /* gong_image052.png in Resources */,
+				F9941FFE1B6A23BD008E13BF /* 1.html in Resources */,
 				F9012BD81B5F8C7800B027C3 /* boss_13.jpg in Resources */,
 				F9F25EF61B462D15004240A0 /* houner_image031.png in Resources */,
 				F90425D01B636E550030692B /* small_38.jpg in Resources */,
@@ -4011,6 +4057,7 @@
 				F9F735581B45308C00DF0109 /* AppDelegate.m in Sources */,
 				F927B84E1B6864DF00D11A0D /* UIResponder+SLKAdditions.m in Sources */,
 				F9FFE91F1B60DAE6006F138E /* ShareData.m in Sources */,
+				F9941FF41B69C72C008E13BF /* SVProgressHUD.m in Sources */,
 				F9F5B9981B61C97B00607181 /* PKSequentialAnimation.m in Sources */,
 				F9F2583F1B461AD5004240A0 /* FMDatabasePool.m in Sources */,
 				F9F5B9961B61C97B00607181 /* PKAnimation.m in Sources */,
@@ -4018,6 +4065,7 @@
 				9CF26DBA1B67A198009A2152 /* AboutMeActivity.m in Sources */,
 				F9F5B9951B61C97B00607181 /* PKRevealControllerView.m in Sources */,
 				F927B84F1B6864DF00D11A0D /* UIScrollView+SLKAdditions.m in Sources */,
+				F9941FF51B69C72C008E13BF /* SVIndefiniteAnimatedView.m in Sources */,
 				F9F5B9941B61C97B00607181 /* UIViewController+PKRevealController.m in Sources */,
 				F9F258401B461AD5004240A0 /* FMDatabaseQueue.m in Sources */,
 				F9F7358E1B45429700DF0109 /* DBHelper.m in Sources */,

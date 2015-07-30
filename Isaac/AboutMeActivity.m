@@ -9,18 +9,22 @@
 #import "AboutMeActivity.h"
 #import "Common.h"
 #import "SKPSMTPMessage.h"
+#import "SVProgressHUD.h"
 
 @interface AboutMeActivity ()
 @property (weak, nonatomic) IBOutlet SLKTextView *contentTxt;
 
 @end
 
-@implementation AboutMeActivity
+@implementation AboutMeActivity{
+    BOOL sended;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.backgroundColor=[Common colorWithHexString:@"#e0e0e0"];
     self.tableView.tableFooterView=[[UIView alloc] init];
+    self.contentTxt.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,26 +61,25 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     if(indexPath.section==4){
         if([Common isEmptyString:_contentTxt.text]){
             return;
         }else{
+            [_contentTxt resignFirstResponder];
+            [SVProgressHUD showWithStatus:@"正在发送" maskType:SVProgressHUDMaskTypeBlack];
             [self sendMsg];
         }
     }
 }
 
--(BOOL)textViewShouldEndEditing:(UITextView *)textView{
-    [_contentTxt resignFirstResponder];
-    return YES;
-}
 
 -(void)sendMsg{
     SKPSMTPMessage *testMsg = [[SKPSMTPMessage alloc] init];
     testMsg.fromEmail = @"funny_ba@163.com";
     testMsg.toEmail = @"funny_ba@163.com";
-    testMsg.bccEmail = @"smtp.163.com";
-    testMsg.relayHost = @"";
+    testMsg.bccEmail = @"funny_ba@163.com";
+    testMsg.relayHost = @"smtp.163.com";
     
     testMsg.requiresAuth = YES;
     
@@ -102,8 +105,62 @@
 }
 -(void)messageSent:(SKPSMTPMessage *)message{
     NSLog(@"%@",message);
+    sended=YES;
+    [SVProgressHUD showSuccessWithStatus:@"谢谢你给我留言!" ];
+    
 }
 -(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error{
     NSLog(@"%@,err:%@",message,error);
+    [SVProgressHUD showErrorWithStatus:@"发送失败了!"];
 }
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]){
+        if([Common isEmptyString:_contentTxt.text]){
+            return YES;
+        }else{
+            [_contentTxt resignFirstResponder];
+            [SVProgressHUD showWithStatus:@"正在发送" maskType:SVProgressHUDMaskTypeBlack ];
+            [self sendMsg];
+        }
+        return NO;
+    }
+    return YES;
+}
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
+
+#pragma mark - Notification Methods Sample
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDWillAppearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDDidAppearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDWillDisappearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDDidDisappearNotification
+                                               object:nil];
+}
+
+- (void)handleNotification:(NSNotification *)notif
+{
+    NSLog(@"Notification recieved: %@", notif.name);
+    NSLog(@"Status user info key: %@", [notif.userInfo objectForKey:SVProgressHUDStatusUserInfoKey]);
+}
+
 @end
