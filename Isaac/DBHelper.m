@@ -45,7 +45,7 @@ static const NSString *TB_OTHER = @"tb_other";
         NSString *sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(1200),power varchar(20),unlock varchar(200),type char(1) )";
         BOOL success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_ISAAC]];
         
-        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(1000),score varchar(5))";
+        sql = @"CREATE TABLE IF NOT EXISTS %@ (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, image varchar(20),name varchar(60),enname varchar(60) ,content varchar(1200),score varchar(5))";
         
         success =  [db executeUpdate:[NSString stringWithFormat:sql,TB_BOSS]];
         

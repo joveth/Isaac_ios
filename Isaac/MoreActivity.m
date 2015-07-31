@@ -47,7 +47,9 @@
         [self performSegueWithIdentifier:@"toDetail" sender:nil];
         return;
     }else if(indexPath.section==1){
-    
+        [ShareData shareInstance].type=[NSString stringWithFormat:@"%ld",(indexPath.row+1)];
+        [self performSegueWithIdentifier:@"showHtml" sender:nil];
+        return;
     }else if(indexPath.section==2){
         [self performSegueWithIdentifier:@"aboutMe" sender:nil];
     }

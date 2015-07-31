@@ -46,12 +46,13 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellidentifier = @"cellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellidentifier];
-    UIImageView *bImg = (UIImageView*)[cell viewWithTag:1];
-    UILabel *nameLab = (UILabel*)[cell viewWithTag:2];
-    UILabel *contLab = (UILabel*)[cell viewWithTag:3];
+    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellidentifier];
     }
+    UIImageView *bImg = (UIImageView*)[cell viewWithTag:1];
+    UILabel *nameLab = (UILabel*)[cell viewWithTag:2];
+    UILabel *contLab = (UILabel*)[cell viewWithTag:3];
     if(bImg==nil){
         bImg =[[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
         [bImg.layer setCornerRadius:20];
