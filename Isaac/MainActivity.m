@@ -260,7 +260,7 @@
     [rightBtn addTarget:self action:@selector(onClickScan) forControlEvents:UIControlEventTouchDown];
     
     [inHeaderView addSubview:leftBtn];
-    [inHeaderView addSubview:rightBtn];
+    //[inHeaderView addSubview:rightBtn];
     [inHeaderView addSubview:searchHeader];
     [headerView addSubview:inHeaderView];
     return headerView;
