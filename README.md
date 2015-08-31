@@ -25,7 +25,11 @@ https://itunes.apple.com/cn/app/yi-sa-tu-jian-for-isaac/id1032588721?mt=8
 
 新版本2个，大家选一个，给我发邮件（funny_ba@163.com）：
 
+1==============================================================
 ![""](https://github.com/joveth/Isaac_ios/blob/feature/ver1/iOS%20Simulator%20Screen%20Shot%202015%E5%B9%B48%E6%9C%8831%E6%97%A5%20%E4%B8%8A%E5%8D%8811.39.34.png)
+
+
+2==============================================================
 ![""](https://github.com/joveth/Isaac_ios/blob/feature/ver1/iOS%20Simulator%20Screen%20Shot%202015%E5%B9%B48%E6%9C%8831%E6%97%A5%20%E4%B8%8B%E5%8D%882.15.18.png)
 
 ======================me=========================
