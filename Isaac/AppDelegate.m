@@ -17,13 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    DBHelper *db = [[DBHelper alloc] init];
-    if([db openDB]){
-        NSInteger cnt = [db getCnt];
-        if(cnt==0){
-            [db initData];
-        }
-    }
+//    DBHelper *db = [[DBHelper alloc] init];
+//    if([db openDB]){
+//        NSInteger cnt = [db getCnt];
+//        if(cnt==0){
+//            [db initData];
+//        }
+//    }
     
     return YES;
 }
