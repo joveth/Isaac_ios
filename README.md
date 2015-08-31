@@ -22,6 +22,12 @@ https://itunes.apple.com/cn/app/yi-sa-tu-jian-for-isaac/id1032588721?mt=8
 
 4.由于不免费，肯定要负责了，每周都更新大家也会觉得烦，每个月做一次更新肯定没问题的，后面还有很多功能要做呢~~~。
 
+
+新版本2个，大家选一个，给我发邮件（funny_ba@163.com）：
+
+![""](https://github.com/joveth/Isaac_ios/blob/feature/ver1/iOS%20Simulator%20Screen%20Shot%202015%E5%B9%B48%E6%9C%8831%E6%97%A5%20%E4%B8%8A%E5%8D%8811.39.34.png)
+![""](https://github.com/joveth/Isaac_ios/blob/feature/ver1/iOS%20Simulator%20Screen%20Shot%202015%E5%B9%B48%E6%9C%8831%E6%97%A5%20%E4%B8%8B%E5%8D%882.15.18.png)
+
 ======================me=========================
 
 http://joveth.github.io/itog/
